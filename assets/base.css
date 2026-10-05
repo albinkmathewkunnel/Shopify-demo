@@ -1750,6 +1750,22 @@ slideshow-component:focus-within > slideshow-container[animate-arrows] > slidesh
   height: var(--size-style-height);
 }
 
+/* Homepage category tiles: a small image response without changing Horizon's global card behavior. */
+#MainContent [id$='__category_cards'] .group-block__media-wrapper {
+  overflow: hidden;
+}
+
+#MainContent [id$='__category_cards'] .group-block__media-wrapper img {
+  transition: transform var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  #MainContent [id$='__category_cards'] .group-block:has(.button-custom):hover .group-block__media-wrapper img,
+  #MainContent [id$='__category_cards'] .group-block:has(.button-custom):focus-within .group-block__media-wrapper img {
+    transform: scale(1.035);
+  }
+}
+
 /* Flex behavior for height variants */
 .layout-panel-flex--column > .group-block--height-fit {
   flex: 0 1 auto;
