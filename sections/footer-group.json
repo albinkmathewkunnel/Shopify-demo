@@ -140,13 +140,26 @@
             "link_preset": "paragraph"
           },
           "blocks": {}
-        }
+        },
+        "customer_care_navigation": {
+              "type": "menu",
+              "name": "Customer Care",
+              "settings": {
+                "menu": "customer-care",
+                "heading": "CUSTOMER CARE",
+                "show_as_accordion": false,
+                "heading_preset": "h4",
+                "link_preset": "paragraph"
+              },
+              "blocks": {}
+            }
       },
-      "block_order": [
-        "group_H6VpwJ",
-        "email_signup_crihX7",
-        "shop_navigation"
-      ],
+     "block_order": [
+          "group_H6VpwJ",
+          "email_signup_crihX7",
+          "shop_navigation",
+          "customer_care_navigation"
+        ],
       "name": "t:names.footer",
       "settings": {
         "section_width": "page-width",
