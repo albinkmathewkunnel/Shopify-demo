@@ -33,6 +33,24 @@
 {% render 'product-badges-styles' %}
 {% render 'resource-list-styles' %}
 {% render 'product-recommendations-styles' %}
+{% stylesheet %}
+  .product-recommendations .section-resource-list__content {
+    margin-block-end: clamp(20px, 3vw, 36px);
+  }
+
+  .product-recommendations .resource-list__item .product-card__content {
+    padding-block-start: 10px;
+  }
+
+  .product-recommendations .resource-list__item .product-card__content p[role='heading'] {
+    font-size: var(--font-paragraph--size);
+    line-height: 1.35;
+  }
+
+  .product-recommendations .resource-list__item product-price {
+    font-size: var(--font-paragraph-small--size);
+  }
+{% endstylesheet %}
 <product-recommendations
   id="product-recommendations-{{ section.id }}"
   class="product-recommendations"
