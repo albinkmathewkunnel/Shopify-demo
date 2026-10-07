@@ -101,11 +101,11 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>You may also like</h3>",
+                "text": "<h2>COMPLETE YOUR LOOK</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
+                "type_preset": "h2",
                 "font": "var(--font-body--family)",
                 "line_height": "normal",
                 "letter_spacing": "normal",
@@ -125,7 +125,7 @@
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
               "settings": {
-                "label": "View all",
+                "label": "VIEW ALL",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
