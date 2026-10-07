@@ -144,18 +144,20 @@
 
               const storedLayoutMobile = sessionStorage.getItem('product-grid-view-mobile') || 'default';
               const storedLayoutDesktop = sessionStorage.getItem('product-grid-view-desktop') || 'default';
-
-              // No need to read the window width if no custom layouts were saved.
-              if (storedLayoutMobile === 'default' && storedLayoutDesktop === 'default') return;
-
-              const storedLayout = window.innerWidth >= 750 ? storedLayoutDesktop : storedLayoutMobile;
-              if (storedLayout === 'default') return;
-
-              grid.setAttribute('product-grid-view', storedLayout);
-
               const options = document.querySelectorAll(
                 'input[type="radio"][name="grid"], input[type="radio"][name="grid-mobile"]'
               );
+
+              // No need to read the window width if no custom layouts were saved.
+              if (storedLayoutMobile === 'default' && storedLayoutDesktop === 'default') return;
+              if (options.length === 0) return;
+
+              const storedLayout = window.innerWidth >= 750 ? storedLayoutDesktop : storedLayoutMobile;
+              if (storedLayout === 'default') return;
+              if (![...options].some((option) => option.value === storedLayout)) return;
+
+              grid.setAttribute('product-grid-view', storedLayout);
+
               for (const option of options) {
                 option.checked = option.value === storedLayout;
               }

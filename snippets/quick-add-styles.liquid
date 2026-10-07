@@ -61,10 +61,10 @@
     align-items: center;
     justify-content: flex-start;
     gap: 0;
-    background: linear-gradient(var(--quick-add-background, var(--color-background)) 0 100%) padding-box;
+    background: var(--quick-add-background, var(--color-background));
     padding: 0;
-    border-radius: 50px;
-    border: 2px solid hsl(0 0% 0% / 0.15);
+    border-radius: var(--style-border-radius-buttons-primary);
+    border: 1px solid color-mix(in srgb, var(--quick-add-foreground, var(--color-foreground)) 20%, transparent);
     height: var(--button-size-md);
     width: var(--quick-add-collapsed-width);
     cursor: pointer;
@@ -78,7 +78,6 @@
     max-inline-size: calc(100% - var(--quick-add-inset-inline-end));
     min-inline-size: 0;
     white-space: nowrap;
-    backdrop-filter: blur(20px) saturate(180%);
     interpolate-size: allow-keywords;
 
     &:hover {
